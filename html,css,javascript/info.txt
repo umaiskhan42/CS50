@@ -1,0 +1,3 @@
+Run this code 
+Install Live Server extension in Vs code 
+Right Click and select live server to open in your browser 
