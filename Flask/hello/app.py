@@ -4,4 +4,5 @@ app=Flask(__name__)
 @app.route("/")
 
 def index():
-    return "Hello World!"
+    name=request.args("name")  #requests comes with flask
+    return render_template("index.html")   # using render templates
