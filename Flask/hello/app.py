@@ -5,4 +5,4 @@ app=Flask(__name__)
 
 def index():
     name=request.args.get("name","world")  #requests comes with flask
-    return render_template("index.html",placeholder=name)   # using render templates
+    return render_template("index.html",name=name)   # using render templates
