@@ -4,5 +4,10 @@ app=Flask(__name__)
 @app.route("/")
 
 def index():
-    name=request.args.get("name","world")  #requests comes with flask
-    return render_template("index.html",name=name)   # using render templates
+
+    return render_template("index.html")   # using render templates
+
+@app.route("/greet")
+def greet():
+    name=request.args.get("name","world")
+    return render_template("greet.html", name=name)
