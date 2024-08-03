@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Edge Detection</title>
+</head>
+<body>
+    <h1>Upload an Image for Edge Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <input type="submit" value="Upload and Process">
+    </form>
+
+    {% if original_image and processed_image %}
+    <h2>Original Image</h2>
+    <img src="{{ url_for('static', filename=original_image.split('static/')[1]) }}" alt="Original Image">
+
+    <h2>Processed Image (Edges Detected)</h2>
+    <img src="{{ url_for('static', filename=processed_image.split('static/')[1]) }}" alt="Processed Image">
+    {% endif %}
+</body>
+</html>
